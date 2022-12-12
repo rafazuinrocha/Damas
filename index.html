@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Jogo - Damas</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+    <style type="text/css">
+        body {
+            margin: 0px;
+            background: #f336c0;
+            font-family: "Arial"
+        }
+        
+        header {
+            height: 50px;
+            background: #F0F0F0;
+            border: 1px solid #CCC;
+            width: 960px;
+            margin: 0px auto;
+            text-align: center;
+        }
+        
+        header h1 {
+            margin: 5px;
+        }
+        
+        header h1 span {
+            color: #f336c0;
+        }
+        
+        section {
+            text-align: center;
+            width: 960px;
+            background: #F0F0F0;
+            border: 1px solid #CCC;
+            margin: 20px auto;
+        }
+        
+        main {
+            -webkit-perspective: 300;
+            perspective: 300;
+            width: 960px;
+            background: #F0F0F0;
+            border: 1px solid #CCC;
+            height: 550px;
+            margin: 20px auto;
+        }
+        
+        .board {
+            text-align: center;
+            -ms-transform: rotateX(8deg);
+            -webkit-transform: rotateX(8deg);
+            transform: rotateX(8deg);
+            width: 500px;
+            height: 456px;
+            border: 1px solid black;
+            margin: 20px auto;
+        }
+        
+        .row {
+            height: 12.5%;
+        }
+        
+        .cell {
+            width: 12.5%;
+            height: 12.5%;
+            float: left;
+            background-color: #fff;
+        }
+        
+        .cell:hover {
+            background-color: #f336c0;
+        }
+        
+        .cell-white {
+            background-color: #fff;
+        }
+        
+        .cell-black {
+            background-color: #0f0f0f;
+        }
+        
+        .selected {
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            border: 2px solid red;
+        }
+        
+        .highlight {
+            background-color: rgb(255, 0, 132);
+            cursor: pointer;
+        }
+        
+        .board img {
+            width: 90%;
+            cursor: pointer;
+        }
+        
+        #white-counter,
+        #black-counter {
+            display: inline;
+            margin-right: 5px
+        }
+        
+        #white-counter span,
+        #black-counter span {
+            color: #f336c0;
+            font-weight: bolder;
+            font-size: 30px;
+        }
+        
+        footer {
+            background: #F0F0F0;
+            border: 1px solid rgb(83, 62, 62);
+            width: 960px;
+            margin: 0px auto;
+            text-align: center;
+        }
+        
+        footer li {
+            display: inline;
+            margin-top: -20px;
+        }
+        
+        footer span {}
+        
+        footer img {
+            height: 30px;
+        }
+        
+        .btn {
+            position: relative;
+            vertical-align: top;
+            width: 150px;
+            height: 45px;
+            margin: 10px;
+            padding: 0;
+            font-size: 22px;
+            color: white;
+            text-align: center;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+            background: #f336c0;
+            border: 0;
+            border-bottom: 2px solid #f336c0;
+            cursor: pointer;
+            -webkit-box-shadow: inset 0 -2px #f336c0;
+            box-shadow: inset 0 -2px #f336c0;
+        }
+        
+        .btn:active {
+            top: 1px;
+            outline: none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+        
+        .btn:hover {
+            background: #f336c0;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <section id="info">
+        <h3>Seja Bem vindo/a ao Jogo de Damas! S2 </h3>
+        <p> O jogo de damas pratica-se entre dois jogadores, num tabuleiro quadrado, de 64 casas alternadamente claras e escuras, dispondo de 12 peças brancas e 12 pretas. O objetivo é capturar ou imobilizar as peças do adversário. O jogador que conseguir
+            capturar todas as peças do inimigo ganha a partida.</p>
+        <p>Boa sorte! Bom jogo! ;) </p>
+        <button class="btn" onclick="init()">Jogar :)</button>
+
+
+    </section>
+    <main></main>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
